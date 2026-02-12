@@ -34,31 +34,31 @@ export default function Home() {
       title: "Fullbody PPF",
       description: "Protectie suprema pentru vopseaua masinii tale. Folia PPF este o bariera invizibila impotriva zgarieturilor, pietricelelor si factorilor chimici.",
       icon: <Shield size={32} />,
-      image: "/portofoliu/542818191_17864937312454778_4759173288046722290_n.jpg"
+      image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Chrome Delete",
       description: "Schimba aspectul masinii prin infolierea elementelor cromate in negru lucios sau mat. Ofera un look mai sportiv si agresiv.",
       icon: <Scissors size={32} />,
-      image: "/portofoliu/505143241_17857749825454778_1629903843666616500_n.jpg"
+      image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Detailing Exterior",
       description: "Proces complex de curatare, decontaminare si corectie a lacului. Eliminam panza de paianjen si zgarieturile fine.",
       icon: <PaintBucket size={32} />,
-      image: "/portofoliu/526887545_17860201467454778_8808329801711584321_n.jpg"
+      image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Detailing Interior",
       description: "Curatare in profunzime a fiecarui element din habitaclu. Igienizare completa cu injectie-extractie si abur.",
       icon: <Armchair size={32} />,
-      image: "/portofoliu/534143849_17862284916454778_543517394185957724_n.jpg"
+      image: "https://images.unsplash.com/photo-1563720223523-491ff04651de?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Reconditionare Faruri",
       description: "Restaurarea claritatii farurilor matuite. Procesul include slefuire progresiva, polishare si protectie PPF.",
       icon: <Lightbulb size={32} />,
-      image: "/portofoliu/552627032_17866423749454778_1498802626795071639_n.jpg"
+      image: "https://images.unsplash.com/photo-1503376763036-066120622c74?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -104,7 +104,7 @@ export default function Home() {
 
       <style jsx>{`
         .hero {
-          height: 85vh;
+          height: 85vh; 
           display: flex;
           align-items: flex-start;
           justify-content: center;
@@ -112,7 +112,7 @@ export default function Home() {
           background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
           background-attachment: fixed;
           text-align: center;
-          padding-top: 15vh; /* High positioning */
+          padding-top: 100px; /* Maximum height position */
         }
         .hero-overlay {
           position: absolute;
@@ -128,20 +128,20 @@ export default function Home() {
           position: relative;
           z-index: 9999;
           max-width: 900px;
-          margin-top: 0;
+          margin: 0 auto; /* Force horizontal centering */
         }
         .hero h1 {
           font-size: 5rem;
           font-weight: 900;
           line-height: 1.1;
-          margin-bottom: 1.5rem;
+          margin-bottom: 2rem;
           color: #ffffff;
           text-shadow: 3px 3px 0 #000000;
         }
         .hero p {
           font-size: 1.6rem;
           color: #ffffff;
-          margin-bottom: 6rem; /* HUGE GAP to separate from buttons */
+          margin-bottom: 8rem; /* EXTREME gap separating text from buttons */
           font-weight: 700;
           text-shadow: 2px 2px 0 #000000;
           letter-spacing: 0.5px;
