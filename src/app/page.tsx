@@ -58,7 +58,7 @@ export default function Home() {
       title: "Reconditionare Faruri",
       description: "Restaurarea claritatii farurilor matuite. Procesul include slefuire progresiva, polishare si protectie PPF.",
       icon: <Lightbulb size={32} />,
-      image: "/portofoliu/518072471_17857497099454778_5571668123458131904_n.jpg"
+      image: "/portofoliu/552627032_17866423749454778_1498802626795071639_n.jpg"
     }
   ];
 
@@ -101,6 +101,52 @@ export default function Home() {
         </motion.div>
         <div className="hero-overlay"></div>
       </section>
+
+      <style jsx>{`
+        .hero {
+          height: 85vh;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          position: relative;
+          background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+          background-attachment: fixed;
+          text-align: center;
+          padding-top: 15vh; /* High positioning */
+        }
+        .hero-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+          pointer-events: none;
+        }
+        .hero-content {
+          position: relative;
+          z-index: 9999;
+          max-width: 900px;
+          margin-top: 0;
+        }
+        .hero h1 {
+          font-size: 5rem;
+          font-weight: 900;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+          color: #ffffff;
+          text-shadow: 3px 3px 0 #000000;
+        }
+        .hero p {
+          font-size: 1.6rem;
+          color: #ffffff;
+          margin-bottom: 6rem; /* HUGE GAP to separate from buttons */
+          font-weight: 700;
+          text-shadow: 2px 2px 0 #000000;
+          letter-spacing: 0.5px;
+        }
+      `}</style>
 
       {/* Services Preview */}
       <section className="section container">
