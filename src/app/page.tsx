@@ -511,14 +511,15 @@ export default function Home() {
 
       <style jsx>{`
         .hero {
-          height: 85vh; /* Slightly taller */
+          height: 85vh; 
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           position: relative;
           background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-          background-attachment: fixed; /* Parallax feel */
+          background-attachment: fixed;
           text-align: center;
+          padding-top: 130px; /* Moved MUCH higher, just below navbar */
         }
         .hero-overlay {
           position: absolute;
@@ -526,29 +527,30 @@ export default function Home() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(10,10,10,1));
+          background: rgba(0, 0, 0, 0.5);
           z-index: 1;
-          pointer-events: none; /* Ensure clicks pass through */
+          pointer-events: none;
         }
         .hero-content {
           position: relative;
-          z-index: 10; /* Higher z-index */
-          max-width: 800px;
+          z-index: 9999; /* Absolute top layer */
+          max-width: 900px;
+          margin-top: 0;
         }
         .hero h1 {
-          font-size: 4.5rem;
-          font-weight: 800;
+          font-size: 5rem; /* Larger */
+          font-weight: 900;
           line-height: 1.1;
           margin-bottom: 1.5rem;
           color: #ffffff;
-          text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+          text-shadow: 3px 3px 0 #000000; /* Solid hard shadow for max visibility */
         }
         .hero p {
-          font-size: 1.4rem;
+          font-size: 1.6rem; /* Larger */
           color: #ffffff;
           margin-bottom: 2.5rem;
-          font-weight: 600;
-          text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+          font-weight: 700;
+          text-shadow: 2px 2px 0 #000000; /* Solid hard shadow */
           letter-spacing: 0.5px;
         }
         .hero-cta {
