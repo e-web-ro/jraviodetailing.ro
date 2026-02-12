@@ -282,7 +282,7 @@ export default function Pricing() {
 
       <style jsx>{`
         .page-header {
-          padding: 6rem 0 4rem;
+          padding: 10rem 0 4rem;
           background: linear-gradient(to bottom, #111, #0a0a0a);
           border-bottom: 1px solid #222;
           text-align: center;

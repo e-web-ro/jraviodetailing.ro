@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Phone } from 'lucide-react';
@@ -8,8 +8,22 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuVariants: Variants = {
     closed: {
@@ -25,26 +39,28 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link href="/" className="logo">
-          <Image src="/logo.jpg" alt="Jravio Detailing Logo" width={70} height={70} style={{ borderRadius: '50%', border: '2px solid rgba(255,255,255,0.1)' }} />
+          <div className="logo-wrapper">
+            <Image src="/logo.jpg" alt="Jravio Detailing Logo" width={80} height={80} className="logo-img" />
+          </div>
         </Link>
 
         {/* Desktop Menu */}
         <div className="nav-links desktop-only">
-          <Link href="/">Acasa</Link>
-          <Link href="/servicii">Servicii</Link>
-          <Link href="/pricing">Preturi</Link>
-          <Link href="/gallery">Galerie</Link>
-          <a href="tel:0763624228" className="btn btn-primary btn-sm">
-            <Phone size={16} style={{ marginRight: '8px' }} /> 0763 624 228
+          <Link href="/" className="nav-link">Acasa</Link>
+          <Link href="/servicii" className="nav-link">Servicii</Link>
+          <Link href="/pricing" className="nav-link">Preturi</Link>
+          <Link href="/gallery" className="nav-link">Galerie</Link>
+          <a href="tel:0763624228" className="btn-call">
+            <Phone size={18} /> <span>0763 624 228</span>
           </a>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -63,9 +79,9 @@ export default function Navbar() {
               <Link href="/servicii" onClick={toggleMenu}>Servicii</Link>
               <Link href="/pricing" onClick={toggleMenu}>Preturi</Link>
               <Link href="/gallery" onClick={toggleMenu}>Galerie</Link>
-              <Link href="/contact" onClick={toggleMenu} className="btn btn-primary btn-full">
-                Contacteaza-ne
-              </Link>
+              <a href="tel:0763624228" className="btn-call mobile-btn">
+                <Phone size={18} /> Suna Acum
+              </a>
             </div>
           </motion.div>
         )}
@@ -73,94 +89,175 @@ export default function Navbar() {
 
       <style jsx>{`
         .navbar {
-          background: rgba(5, 5, 5, 0.85);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          position: sticky;
+          position: fixed;
           top: 0;
+          left: 0;
+          width: 100%;
           z-index: 1000;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          padding: 0.5rem 0;
-          transition: background 0.3s;
+          padding: 1.5rem 0;
+          background: transparent;
+          transition: all 0.4s ease;
         }
+
+        .navbar.scrolled {
+          background: rgba(10, 10, 10, 0.85);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          padding: 0.8rem 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
         .nav-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
+
         .logo {
           display: flex;
           align-items: center;
+          gap: 12px;
           text-decoration: none;
+        }
+
+        .logo-wrapper {
+          position: relative;
           transition: transform 0.3s;
         }
-        .logo:hover {
+
+        .logo:hover .logo-wrapper {
           transform: scale(1.05);
         }
+
+        .logo-img {
+          display: block;
+          border-radius: 8px; /* Slight rounding for a modern look */
+        }
+
+        .logo-text {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: white;
+          letter-spacing: 1px;
+        }
+
+        .highlight {
+          color: var(--primary);
+        }
+
         .nav-links {
           display: flex;
           gap: 2.5rem;
           align-items: center;
         }
-        .nav-links a:not(.btn) {
-          color: #ccc;
+
+        .nav-link {
+          color: #ddd;
           font-weight: 500;
-          transition: color 0.3s;
+          font-size: 0.95rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
           position: relative;
-          padding: 0.5rem 0;
+          padding: 5px 0;
+          transition: color 0.3s;
         }
-        .nav-links a:not(.btn):hover {
-          color: white;
-          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-        }
-        .nav-links a:not(.btn)::after {
+
+        .nav-link::after {
           content: '';
           position: absolute;
+          bottom: 0;
+          left: 0;
           width: 0;
           height: 2px;
-          bottom: 0px;
-          left: 0;
-          background-color: var(--primary);
+          background: var(--primary);
           transition: width 0.3s ease;
           box-shadow: 0 0 8px var(--primary);
         }
-        .nav-links a:not(.btn):hover::after {
+
+        .nav-link:hover {
+          color: white;
+        }
+
+        .nav-link:hover::after {
           width: 100%;
         }
-        .btn-sm {
-          padding: 0.5rem 1.2rem;
-          font-size: 0.9rem;
+
+        .btn-call {
+          background: linear-gradient(135deg, var(--primary) 0%, #d00000 100%);
+          color: white;
+          padding: 0.7rem 1.5rem;
+          border-radius: 50px;
+          font-weight: 600;
+          font-size: 0.95rem;
           display: flex;
           align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          box-shadow: 0 4px 15px rgba(255, 59, 59, 0.3);
+          transition: all 0.3s ease;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
+        .btn-call:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 59, 59, 0.5);
+          filter: brightness(1.1);
+        }
+
         .mobile-toggle {
           display: none;
           background: none;
           border: none;
           color: white;
           cursor: pointer;
+          padding: 5px;
         }
 
         .mobile-menu {
           overflow: hidden;
-          background: #0a0a0a;
-          border-bottom: 1px solid #222;
+          background: rgba(10, 10, 10, 0.95);
+          backdrop-filter: blur(16px);
+          border-bottom: 1px solid #333;
+          position: fixed;
+          top: 75px; /* Adjust based on scrolled height approximately */
+          left: 0;
+          width: 100%;
+          z-index: 999;
         }
+
         .mobile-nav-links {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
-          padding: 2rem 1rem;
+          padding: 2rem;
+          align-items: center;
         }
+
         .mobile-nav-links a {
-          font-size: 1.2rem;
-          color: #ddd;
-        }
-        .btn-full {
+          font-size: 1.1rem;
+          color: #eee;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 600;
           width: 100%;
           text-align: center;
+        }
+        
+        .mobile-btn {
+          margin-top: 1rem;
           justify-content: center;
+          width: 100%;
+          max-width: 250px;
+        }
+
+        @media (max-width: 900px) {
+           .logo-text {
+             font-size: 1.1rem;
+           }
+           .nav-links {
+             gap: 1.5rem;
+           }
         }
 
         @media (max-width: 768px) {
@@ -170,8 +267,13 @@ export default function Navbar() {
           .mobile-toggle {
             display: block;
           }
-          .logo-text {
-             font-size: 1.2rem;
+          .navbar {
+            padding: 1rem 0;
+            background: rgba(10, 10, 10, 0.85); /* Always dark on mobile for visibility */
+            backdrop-filter: blur(12px);
+          }
+          .mobile-menu {
+            top: 70px;
           }
         }
       `}</style>

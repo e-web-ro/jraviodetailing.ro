@@ -30,7 +30,6 @@ export default function Gallery() {
     { src: "/portofoliu/558301642_1857831758945018_6749391576225849454_n.jpg" },
     { src: "/portofoliu/629868540_1270959788272990_4106681548580487520_n.jpg" },
     { src: "/portofoliu/584403281_689888817184681_7891745417107844995_n.jpg" },
-    { src: "/portofoliu/614643230_4300218283530614_7891682747407462200_n.jpg" },
     { src: "/portofoliu/553472656_3761824820782138_2481548277377934948_n.jpg" },
     { src: "/portofoliu/551832710_17865906543454778_7918687230567193298_n.jpg" }
   ];
@@ -81,7 +80,7 @@ export default function Gallery() {
 
       <style jsx>{`
         .page-header {
-          padding: 6rem 0 4rem;
+          padding: 10rem 0 4rem;
           background: linear-gradient(to bottom, #111, #0a0a0a);
           border-bottom: 1px solid #222;
           text-align: center;

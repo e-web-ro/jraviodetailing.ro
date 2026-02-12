@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Shield, Star, Clock, ArrowRight, Gem, PaintBucket, Scissors, CheckCircle2, Armchair, Lightbulb } from 'lucide-react';
+import { Shield, Star, Clock, ArrowRight, Gem, PaintBucket, Scissors, CheckCircle2, Armchair, Lightbulb, Check, Zap } from 'lucide-react';
 
 export default function Home() {
   const fadeIn = {
@@ -80,7 +80,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Perfectiune in Detailing Auto
+            Perfectiune in Detailing Auto Bucuresti
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -287,6 +287,226 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Preview Section */}
+      <section className="section container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="section-title">Pachete Detailing Exterior</h2>
+          <p className="section-subtitle">Alege nivelul de protectie potrivit pentru masina ta</p>
+        </motion.div>
+
+        <div className="pricing-grid">
+          {/* Silver Package */}
+          <motion.div
+            className="pricing-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -10, borderColor: "#333", backgroundColor: "#181818" }}
+            transition={{ delay: 0.1 }}
+          >
+            <div className="card-header">
+              <h3>Pachet Silver</h3>
+              <p className="subtitle">Polish One Step</p>
+              <p className="description">Elimină 45-50% din zgârieturi și redă luciul lacului.</p>
+            </div>
+
+            <div className="prices">
+              <div className="price-row"><span>Clasa mică</span> <strong>999 RON</strong></div>
+              <div className="price-row"><span>Clasa medie</span> <strong>1149 RON</strong></div>
+              <div className="price-row"><span>Clasa mare</span> <strong>1299 RON</strong></div>
+              <div className="price-row"><span>SUV</span> <strong>1499 RON</strong></div>
+            </div>
+
+            <div className="bonus">
+              <Star size={18} className="icon" />
+              <p><strong>Gratuit:</strong> Tratament cu ceară solidă Meguiars Ultimate Wax (3-4 luni)</p>
+            </div>
+
+            <div className="features">
+              <h4>Include procesul de spălare:</h4>
+              <ul>
+                <li><Check size={16} className="check" /> Spălare detaliată 2 găleți</li>
+                <li><Check size={16} className="check" /> Decontaminare chimică și fizică</li>
+                <li><Check size={16} className="check" /> Curățare jante și anvelope</li>
+                <li><Check size={16} className="check" /> Aplicare dressing anvelope</li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/40763624228" target="_blank" rel="noopener noreferrer" className="btn btn-outline full-width">Programează-te</a>
+          </motion.div>
+
+          {/* Gold Package - Popular */}
+          <motion.div
+            className="pricing-card popular"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02, y: -10 }}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="popular-badge">POPULAR</div>
+            <div className="card-header">
+              <h3>Pachet Gold</h3>
+              <p className="subtitle">Polish 2 Step (Corecție Lac)</p>
+              <p className="description">Elimină 90-95% din zgârieturi, redă strălucirea inițială de fabrică.</p>
+            </div>
+
+            <div className="prices">
+              <div className="price-row"><span>Clasa mică</span> <strong>1999 RON</strong></div>
+              <div className="price-row"><span>Clasa medie</span> <strong>2199 RON</strong></div>
+              <div className="price-row"><span>Clasa mare</span> <strong>2399 RON</strong></div>
+              <div className="price-row"><span>SUV</span> <strong>2599 RON</strong></div>
+            </div>
+
+            <div className="bonus highlight">
+              <Shield size={18} className="icon" />
+              <p><strong>Gratuit:</strong> Tratament ceramic ultrahidrofob Gtechnic Exo v5 (24 luni)</p>
+            </div>
+
+            <div className="features">
+              <h4>Include procesul de spălare:</h4>
+              <ul>
+                <li><Check size={16} className="check" /> Tot ce include pachetul Silver</li>
+                <li><Check size={16} className="check" /> Degresare balamale uși</li>
+                <li><Check size={16} className="check" /> Aplicare tratament chedere</li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/40763624228" target="_blank" rel="noopener noreferrer" className="btn btn-primary full-width">Programează-te</a>
+          </motion.div>
+
+          {/* Platinum Package */}
+          <motion.div
+            className="pricing-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -10, borderColor: "#333", backgroundColor: "#181818" }}
+            transition={{ delay: 0.3 }}
+          >
+            <div className="card-header">
+              <h3>Pachet Platinum</h3>
+              <p className="subtitle">Polish 2-3 Step & Full Ceramic</p>
+              <p className="description">Include tot din Gold + strat suplimentar G-Technic Crystal Serum Light (Total 60 luni protecție).</p>
+            </div>
+
+            <div className="prices">
+              <div className="price-row"><span>Clasa mică</span> <strong>2799 RON</strong></div>
+              <div className="price-row"><span>Clasa medie</span> <strong>3099 RON</strong></div>
+              <div className="price-row"><span>Clasa mare</span> <strong>3499 RON</strong></div>
+              <div className="price-row"><span>SUV</span> <strong>3999 RON</strong></div>
+            </div>
+
+            <div className="bonus">
+              <Zap size={18} className="icon" />
+              <p><strong>Gratuit:</strong> Tratament hidrofob geamuri</p>
+            </div>
+
+            <div className="features">
+              <h4>Include procesul de spălare:</h4>
+              <ul>
+                <li><Check size={16} className="check" /> Pachet premium complet</li>
+                <li><Check size={16} className="check" /> Curățare detaliată etrieri</li>
+                <li><Check size={16} className="check" /> Curățare compartiment motor (la cerere)</li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/40763624228" target="_blank" rel="noopener noreferrer" className="btn btn-outline full-width">Programează-te</a>
+          </motion.div>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <Link href="/pricing" className="btn btn-outline">
+            Vezi Lista Completa de Preturi (PPF, Interior) <ArrowRight size={16} style={{ display: 'inline', marginLeft: '5px' }} />
+          </Link>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="section bg-darker" style={{ overflow: 'hidden', padding: '4rem 0' }}>
+        <div className="container" style={{ marginBottom: '2rem' }}>
+          <h2 className="section-title">Portofoliu Lucrari Recent</h2>
+        </div>
+
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {/* Original Set */}
+            {[
+              "505143241_17857749825454778_1629903843666616500_n.jpg",
+              "517097842_17857270557454778_2691934537107345339_n.jpg",
+              "518072471_17857497099454778_5571668123458131904_n.jpg",
+              "524167739_17859196899454778_3453654246227289282_n.jpg",
+              "526887545_17860201467454778_8808329801711584321_n.jpg",
+              "534143849_17862284916454778_543517394185957724_n.jpg",
+              "534323231_17861928705454778_36140480576635748_n.jpg",
+              "542818191_17864937312454778_4759173288046722290_n.jpg",
+              "543668718_17865165066454778_6724803299633798733_n.jpg",
+              "551832710_17865906543454778_7918687230567193298_n.jpg",
+              "552627032_17866423749454778_1498802626795071639_n.jpg",
+              "553472656_3761824820782138_2481548277377934948_n.jpg",
+              "558301642_1857831758945018_6749391576225849454_n.jpg",
+              "573555990_17871037347454778_4930858486637755745_n.jpg",
+              "573719298_3338848636279690_7728634538714525155_n.jpg",
+              "575511257_17871037338454778_2232946489165793936_n.jpg",
+              "584403281_689888817184681_7891745417107844995_n.jpg",
+              "590417619_1329109788989497_1981107012294555643_n.jpg",
+              "626060451_17881542612454778_6081212463125568744_n.jpg",
+              "626358571_1104181911785038_1573810634875490750_n.jpg",
+              "629868540_1270959788272990_4106681548580487520_n.jpg"
+            ].map((img, i) => (
+              <div key={i} className="portfolio-slide">
+                <Image
+                  src={`/portofoliu/${img}`}
+                  alt={`Portfolio ${i}`}
+                  width={400}
+                  height={300}
+                  style={{ objectFit: 'cover', borderRadius: '12px' }}
+                />
+              </div>
+            ))}
+            {/* Duplicate Set for Loop */}
+            {[
+              "505143241_17857749825454778_1629903843666616500_n.jpg",
+              "517097842_17857270557454778_2691934537107345339_n.jpg",
+              "518072471_17857497099454778_5571668123458131904_n.jpg",
+              "524167739_17859196899454778_3453654246227289282_n.jpg",
+              "526887545_17860201467454778_8808329801711584321_n.jpg",
+              "534143849_17862284916454778_543517394185957724_n.jpg",
+              "534323231_17861928705454778_36140480576635748_n.jpg",
+              "542818191_17864937312454778_4759173288046722290_n.jpg",
+              "543668718_17865165066454778_6724803299633798733_n.jpg",
+              "551832710_17865906543454778_7918687230567193298_n.jpg",
+              "552627032_17866423749454778_1498802626795071639_n.jpg",
+              "553472656_3761824820782138_2481548277377934948_n.jpg",
+              "558301642_1857831758945018_6749391576225849454_n.jpg",
+              "573555990_17871037347454778_4930858486637755745_n.jpg",
+              "573719298_3338848636279690_7728634538714525155_n.jpg",
+              "575511257_17871037338454778_2232946489165793936_n.jpg",
+              "584403281_689888817184681_7891745417107844995_n.jpg",
+              "590417619_1329109788989497_1981107012294555643_n.jpg",
+              "626060451_17881542612454778_6081212463125568744_n.jpg",
+              "626358571_1104181911785038_1573810634875490750_n.jpg",
+              "629868540_1270959788272990_4106681548580487520_n.jpg"
+            ].map((img, i) => (
+              <div key={`dup-${i}`} className="portfolio-slide">
+                <Image
+                  src={`/portofoliu/${img}`}
+                  alt={`Portfolio ${i}`}
+                  width={400}
+                  height={300}
+                  style={{ objectFit: 'cover', borderRadius: '12px' }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
 
       <style jsx>{`
@@ -308,10 +528,11 @@ export default function Home() {
           bottom: 0;
           background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(10,10,10,1));
           z-index: 1;
+          pointer-events: none; /* Ensure clicks pass through */
         }
         .hero-content {
           position: relative;
-          z-index: 2;
+          z-index: 10; /* Higher z-index */
           max-width: 800px;
         }
         .hero h1 {
@@ -334,6 +555,8 @@ export default function Home() {
           display: flex;
           gap: 1.5rem;
           justify-content: center;
+          position: relative;
+          z-index: 20; /* Ensure buttons are clickable */
         }
         .section {
           padding: 8rem 0;
@@ -581,7 +804,189 @@ export default function Home() {
             flex-direction: column;
           }
         }
+        
+        /* Portfolio Marquee */
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        }
+        .marquee-track {
+          display: flex;
+          gap: 2rem;
+          width: max-content;
+          animation: scroll 60s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+        .portfolio-slide {
+          position: relative;
+          width: 400px;
+          height: 300px;
+          flex-shrink: 0;
+          transition: transform 0.3s;
+          cursor: pointer;
+        }
+        .portfolio-slide:hover {
+          transform: scale(1.05);
+          z-index: 2;
+        }
+        
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .portfolio-slide {
+            width: 300px;
+            height: 220px;
+          }
+        }
+
+        /* Pricing CSS */
+        .pricing-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 2rem;
+          align-items: flex-start;
+          margin-top: 2rem;
+        }
+        .pricing-card {
+          background: #151515;
+          border: 1px solid #333;
+          border-radius: 12px;
+          padding: 2rem;
+          position: relative;
+          transition: transform 0.3s, border-color 0.3s;
+          display: flex;
+          flex-direction: column;
+        }
+        .pricing-card:hover {
+          transform: translateY(-5px);
+          border-color: #444;
+        }
+        .pricing-card.popular {
+          border-color: var(--primary);
+          background: #1a1a1a;
+          box-shadow: 0 0 30px rgba(255, 77, 77, 0.1);
+          transform: scale(1.02);
+          z-index: 2;
+        }
+        .pricing-card.popular:hover {
+          transform: scale(1.02) translateY(-5px);
+        }
+        .popular-badge {
+          position: absolute;
+          top: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: var(--primary);
+          color: white;
+          padding: 0.5rem 1.5rem;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+        }
+        .card-header {
+          text-align: center;
+          margin-bottom: 2rem;
+          border-bottom: 1px solid #333;
+          padding-bottom: 1.5rem;
+        }
+        .card-header h3 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+          color: white;
+        }
+        .pricing-card .subtitle {
+          color: var(--primary);
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          font-size: 1.1rem;
+        }
+        .pricing-card .description {
+          color: #888;
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+        .prices {
+          background: rgba(0,0,0,0.2);
+          padding: 1rem;
+          border-radius: 8px;
+          margin-bottom: 1.5rem;
+        }
+        .price-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #333;
+          font-size: 0.95rem;
+          color: #ccc;
+        }
+        .price-row:last-child {
+          border-bottom: none;
+        }
+        .price-row strong {
+          color: white;
+        }
+        .bonus {
+          background: rgba(255, 77, 77, 0.1);
+          padding: 1rem;
+          border-radius: 8px;
+          margin-bottom: 1.5rem;
+          display: flex;
+          gap: 10px;
+          align-items: start;
+        }
+        .bonus.highlight {
+          background: rgba(255, 77, 77, 0.2);
+          border: 1px solid rgba(255, 77, 77, 0.3);
+        }
+        .bonus p {
+          font-size: 0.9rem;
+          color: #eee;
+          margin: 0;
+        }
+        .bonus .icon {
+          min-width: 18px;
+          color: var(--primary);
+        }
+        .features h4 {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          color: #aaa;
+        }
+        .features ul {
+          list-style: none;
+          padding: 0;
+          margin-bottom: 2rem;
+        }
+        .features li {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 0.5rem;
+          color: #ccc;
+          font-size: 0.9rem;
+          align-items: flex-start;
+        }
+        .full-width {
+          width: 100%;
+          justify-content: center;
+        }
+        @media (max-width: 900px) {
+          .pricing-card.popular {
+             transform: scale(1);
+             margin: 2rem 0;
+          }
+        }
       `}</style>
-    </main>
+    </main >
   );
 }

@@ -15,6 +15,12 @@ export default function Footer() {
             <a href="/pricing">Lista Preturi</a>
             <a href="/contact">Contact</a>
           </div>
+          <div className="footer-blog">
+            <h4>Sfaturi & Blog</h4>
+            <a href="/ce-este-ppf">Ce este Folia PPF?</a>
+            <a href="/ce-este-protectia-ceramica">Ce este Protectia Ceramica?</a>
+            <a href="/avantaje-detailing">Avantaje Detailing Auto</a>
+          </div>
           <div className="footer-contact">
             <h4>Contact</h4>
             <p>Telefon: <a href="tel:0763624228">0763 624 228</a></p>
@@ -43,17 +49,17 @@ export default function Footer() {
           color: var(--primary);
           margin-bottom: 1rem;
         }
-        .footer-links h4, .footer-contact h4 {
+        .footer-links h4, .footer-contact h4, .footer-blog h4 {
           margin-bottom: 1.5rem;
           color: white;
         }
-        .footer-links a {
+        .footer-links a, .footer-blog a {
           display: block;
           color: #888;
           margin-bottom: 0.5rem;
           transition: color 0.3s;
         }
-        .footer-links a:hover {
+        .footer-links a:hover, .footer-blog a:hover {
           color: var(--primary);
         }
         .footer-contact p {
