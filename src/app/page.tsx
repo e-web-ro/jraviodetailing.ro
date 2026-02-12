@@ -540,16 +540,16 @@ export default function Home() {
           font-weight: 800;
           line-height: 1.1;
           margin-bottom: 1.5rem;
-          background: linear-gradient(to right, #fff, #bbb);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          color: #ffffff;
+          text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
         .hero p {
-          font-size: 1.3rem;
-          color: #ddd;
+          font-size: 1.4rem;
+          color: #ffffff;
           margin-bottom: 2.5rem;
-          font-weight: 300;
+          font-weight: 600;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+          letter-spacing: 0.5px;
         }
         .hero-cta {
           display: flex;
