@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section bg-darker">
+      <section className="section">
         <div className="container">
           <motion.h2
             className="section-title"
@@ -365,7 +365,6 @@ export default function Home() {
               <div className="price-row"><span>Clasa mică</span> <strong>999 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>1149 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>1299 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>1499 RON</strong></div>
             </div>
 
             <div className="bonus">
@@ -406,7 +405,6 @@ export default function Home() {
               <div className="price-row"><span>Clasa mică</span> <strong>1999 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>2199 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>2399 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>2599 RON</strong></div>
             </div>
 
             <div className="bonus highlight">
@@ -445,7 +443,6 @@ export default function Home() {
               <div className="price-row"><span>Clasa mică</span> <strong>2799 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>3099 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>3499 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>3999 RON</strong></div>
             </div>
 
             <div className="bonus">
