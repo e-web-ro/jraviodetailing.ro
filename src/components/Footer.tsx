@@ -6,6 +6,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
+            <div className="footer-logo">
+              <img src="/logo.jpg" alt="Jravio Detailing Logo" />
+            </div>
             <h3>JRAVIO DETAILING</h3>
             <p>Pasiune pentru perfectiune.</p>
           </div>
@@ -48,6 +51,15 @@ export default function Footer() {
         .footer-brand h3 {
           color: var(--primary);
           margin-bottom: 1rem;
+        }
+        .footer-logo {
+          width: 100px;
+          margin-bottom: 1.5rem;
+        }
+        .footer-logo img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
         }
         .footer-links h4, .footer-contact h4, .footer-blog h4 {
           margin-bottom: 1.5rem;
