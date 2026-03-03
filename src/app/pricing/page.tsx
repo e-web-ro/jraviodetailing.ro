@@ -130,12 +130,11 @@ export default function Pricing() {
               <div className="price-row"><span>Clasa mică</span> <strong>999 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>1149 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>1299 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>1499 RON</strong></div>
             </div>
 
             <div className="bonus">
               <Star size={18} className="icon" />
-              <p><strong>Gratuit:</strong> Tratament cu ceară solidă Meguiars Ultimate Wax (3-4 luni)</p>
+              <p><strong>Gratuit:</strong> Tratament cu ceară solidă</p>
             </div>
 
             <div className="features">
@@ -170,7 +169,6 @@ export default function Pricing() {
               <div className="price-row"><span>Clasa mică</span> <strong>1999 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>2199 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>2399 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>2599 RON</strong></div>
             </div>
 
             <div className="bonus highlight">
@@ -209,7 +207,6 @@ export default function Pricing() {
               <div className="price-row"><span>Clasa mică</span> <strong>2799 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>3099 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>3499 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>3999 RON</strong></div>
             </div>
 
             <div className="bonus">
@@ -252,7 +249,6 @@ export default function Pricing() {
               <div className="price-row"><span>Clasa mică</span> <strong>699 RON</strong></div>
               <div className="price-row"><span>Clasa medie</span> <strong>899 RON</strong></div>
               <div className="price-row"><span>Clasa mare</span> <strong>999 RON</strong></div>
-              <div className="price-row"><span>SUV</span> <strong>1199 RON</strong></div>
             </div>
 
             <div className="bonus">
