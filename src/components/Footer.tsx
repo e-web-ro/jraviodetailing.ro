@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.jpg?v=2" alt="Jravio Detailing Logo" />
+              <img src="/logo.jpg" alt="Jravio Detailing Logo" />
             </div>
             <h3>JRAVIO DETAILING</h3>
             <p>Pasiune pentru perfectiune.</p>

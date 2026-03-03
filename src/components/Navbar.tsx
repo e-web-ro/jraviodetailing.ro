@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <Link href="/" className="logo">
           <div className="logo-wrapper">
-            <Image src="/logo.jpg?v=2" alt="Jravio Detailing Logo" width={120} height={120} className="logo-img" />
+            <Image src="/logo.jpg" alt="Jravio Detailing Logo" width={120} height={120} className="logo-img" />
           </div>
         </Link>
 
