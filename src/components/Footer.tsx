@@ -1,0 +1,93 @@
+"use client";
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <img src="/logo.jpg" alt="Jravio Detailing Logo" />
+            </div>
+            <h3>JRAVIO DETAILING</h3>
+            <p>Pasiune pentru perfectiune.</p>
+          </div>
+          <div className="footer-links">
+            <h4>Navigare</h4>
+            <a href="/servicii">Servicii</a>
+            <a href="/pricing">Lista Preturi</a>
+            <a href="/contact">Contact</a>
+          </div>
+          <div className="footer-blog">
+            <h4>Sfaturi & Blog</h4>
+            <a href="/ce-este-ppf">Ce este Folia PPF?</a>
+            <a href="/ce-este-protectia-ceramica">Ce este Protectia Ceramica?</a>
+            <a href="/avantaje-detailing">Avantaje Detailing Auto</a>
+          </div>
+          <div className="footer-contact">
+            <h4>Contact</h4>
+            <p>Telefon: <a href="tel:0764641169">+40 764 641 169</a></p>
+            <p>Email: contact@jraviodetailing.ro</p>
+            <p>Adresa: Strada Smochinului nr 7, Sector 1, București</p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Jravio Detailing. Toate drepturile rezervate.</p>
+          <p style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
+            Realizat de <a href="https://e-web.ro" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '600' }}>e-web.ro</a>
+          </p>
+        </div>
+      </div>
+      <style jsx>{`
+        .footer {
+          background: #050505;
+          padding: 4rem 0 2rem;
+          border-top: 1px solid #222;
+          margin-top: 4rem;
+        }
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
+          margin-bottom: 3rem;
+        }
+        .footer-brand h3 {
+          color: var(--primary);
+          margin-bottom: 1rem;
+        }
+        .footer-logo {
+          width: 140px;
+          margin-bottom: 1.5rem;
+        }
+        .footer-logo img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+        .footer-links h4, .footer-contact h4, .footer-blog h4 {
+          margin-bottom: 1.5rem;
+          color: white;
+        }
+        .footer-links a, .footer-blog a {
+          display: block;
+          color: #888;
+          margin-bottom: 0.5rem;
+          transition: color 0.3s;
+        }
+        .footer-links a:hover, .footer-blog a:hover {
+          color: var(--primary);
+        }
+        .footer-contact p {
+          color: #888;
+          margin-bottom: 0.5rem;
+        }
+        .footer-bottom {
+          text-align: center;
+          color: #555;
+          padding-top: 2rem;
+          border-top: 1px solid #111;
+        }
+      `}</style>
+    </footer>
+  );
+}
