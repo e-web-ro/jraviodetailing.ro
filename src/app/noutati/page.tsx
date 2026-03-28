@@ -32,22 +32,15 @@ export default function NoutatiIndex() {
             <section className="section container" style={{ padding: '4rem 0' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
                     {articles.map((article, index) => (
-                        <Link key={index} href={`/noutati/${article.slug}`} style={{ background: '#111', padding: '2rem', borderRadius: '12px', border: '1px solid #222', transition: 'all 0.3s' }} className="article-card">
-                            <h3 style={{ color: 'white', marginBottom: '1rem' }}>{article.title}</h3>
-                            <span style={{ color: '#ff3b3b' }}>Citește articolul &rarr;</span>
+                        <Link key={index} href={`/noutati/${article.slug}`} className="article-card">
+                            <h3>{article.title}</h3>
+                            <span>Citește articolul &rarr;</span>
                         </Link>
                     ))}
                 </div>
             </section>
 
             <Footer />
-            <style jsx>{`
-                .article-card:hover {
-                    border-color: #ff3b3b;
-                    transform: translateY(-5px);
-                    background: #151515;
-                }
-            `}</style>
         </main>
     );
 }
