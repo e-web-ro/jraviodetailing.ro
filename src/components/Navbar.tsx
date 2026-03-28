@@ -133,6 +133,15 @@ export default function Navbar() {
         .logo-img {
           display: block;
           border-radius: 8px; /* Slight rounding for a modern look */
+          height: auto;
+          max-height: 80px;
+          width: auto;
+        }
+
+        @media (max-width: 768px) {
+          .logo-img {
+            max-height: 60px;
+          }
         }
 
         .logo-text {
@@ -268,12 +277,12 @@ export default function Navbar() {
             display: block;
           }
           .navbar {
-            padding: 1rem 0;
-            background: rgba(10, 10, 10, 0.85); /* Always dark on mobile for visibility */
+            padding: 0.6rem 0;
+            background: rgba(10, 10, 10, 0.95); /* Better visibility on mobile */
             backdrop-filter: blur(12px);
           }
           .mobile-menu {
-            top: 70px;
+            top: 65px;
           }
         }
       `}</style>

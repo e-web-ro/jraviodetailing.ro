@@ -370,14 +370,14 @@ export default function Home() {
             <div className="bonus">
               <Star size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceară Solidă</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceară Solidă Premium</strong></li>
                 <li><Check size={16} className="check" /> Spălare detaliată 2 găleți</li>
                 <li><Check size={16} className="check" /> Decontaminare chimică și fizică</li>
                 <li><Check size={16} className="check" /> Curățare jante și anvelope</li>
@@ -413,14 +413,14 @@ export default function Home() {
             <div className="bonus highlight">
               <Shield size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceramic GTechniq Exo v5</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceramic GTechniq Exo v5</strong></li>
                 <li><Check size={16} className="check" /> Tot ce include pachetul Silver</li>
                 <li><Check size={16} className="check" /> Degresare balamale uși</li>
                 <li><Check size={16} className="check" /> Aplicare tratament chedere</li>
@@ -454,14 +454,14 @@ export default function Home() {
             <div className="bonus">
               <Zap size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceramic GTechniq Crystal Serum Light + Exo v5</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceramic GTechniq Crystal Serum Light + Exo v5</strong></li>
                 <li><Check size={16} className="check" /> Pachet premium complet</li>
                 <li><Check size={16} className="check" /> Curățare detaliată etrieri</li>
                 <li><Check size={16} className="check" /> Curățare compartiment motor (la cerere)</li>
@@ -860,11 +860,26 @@ export default function Home() {
           font-size: 1.3rem;
         }
         @media (max-width: 768px) {
+          .hero {
+            padding-top: 150px;
+            height: auto;
+            min-height: 90vh;
+            padding-bottom: 4rem;
+          }
           .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+          }
+          .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 4rem; /* Reduced from 10rem for mobile */
           }
           .hero-cta {
             flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
           }
         }
         

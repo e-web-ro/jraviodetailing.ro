@@ -136,14 +136,14 @@ export default function Pricing() {
             <div className="bonus">
               <Star size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceară Solidă</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceară Solidă Premium</strong></li>
                 {commonFeatures.map((f, i) => (
                   <li key={i}><Check size={16} className="check" /> {f}</li>
                 ))}
@@ -179,14 +179,14 @@ export default function Pricing() {
             <div className="bonus highlight">
               <Shield size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceramic GTechniq Exo v5</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceramic GTechniq Exo v5</strong></li>
                 {commonFeatures.map((f, i) => (
                   <li key={i}><Check size={16} className="check" /> {f}</li>
                 ))}
@@ -220,14 +220,14 @@ export default function Pricing() {
             <div className="bonus">
               <Zap size={18} className="icon" />
               <div>
-                <p><strong>Gratuit:</strong> Tratament Ceramic GTechniq Crystal Serum Light + Exo v5</p>
                 <p><strong>Gratuit:</strong> Tratament Hidrofob Geamuri</p>
               </div>
             </div>
 
             <div className="features">
-              <h4>Include procesul de spălare:</h4>
+              <h4>Include:</h4>
               <ul>
+                <li><Check size={16} className="check" /> <strong>Tratament Ceramic Crystal Serum Light + Exo v5</strong></li>
                 {commonFeatures.map((f, i) => (
                   <li key={i}><Check size={16} className="check" /> {f}</li>
                 ))}
